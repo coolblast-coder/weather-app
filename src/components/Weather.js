@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./weather.css";
+import DisplayWeather from "./DisplayWeather";
 
 function Weather() {
   const APIKEY = "397dc0d89b678bce374dbf99d8299265";
@@ -65,7 +66,9 @@ function Weather() {
       </form>
 
       {weather.data != undefined ? (
-        <div>DisplayWeather data = {weather.data}</div>
+        <div>
+          <DisplayWeather data={weather.data} />
+        </div>
       ) : null}
     </div>
   );
